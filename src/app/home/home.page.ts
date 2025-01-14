@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -9,5 +10,12 @@ import { Component } from '@angular/core';
 export class HomePage {
 
   constructor() {}
+
+  nombre = new FormControl('');
+  email = new FormControl('');
+  cambiarNombre(){
+    this.nombre.setValue('Ornitorrinco');
+    this.email.setValue('Ornitorrinco@gmail.com');
+  }
 
 }
