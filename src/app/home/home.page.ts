@@ -12,10 +12,15 @@ export class HomePage {
   constructor() {}
 
   nombre = new FormControl('');
+  valid = new FormControl();
   email = new FormControl('');
-  cambiarNombre(){
-    this.nombre.setValue('Ornitorrinco');
-    this.email.setValue('Ornitorrinco@gmail.com');
+  Email = new FormControl('');
+  Nombre = new FormControl('');
+  Enviar(){
+    if (this.valid.value == 1){
+      this.Nombre.setValue(this.nombre.value);
+      this.Email.setValue(this.email.value);
+    }
   }
 
 }
